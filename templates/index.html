@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="card">
+    <div class="card-body">
+            <h3 class="card-title">Bem-vindo ao Jogo de Adivinhação</h3>
+            <h5 id="numeroCorreto" class="invisible">Numero correto:{{ numero_aleatorio }}</h5> 
+            <p>Tentativas restantes: {{tentativas_restantes}}</p>
+       
+            <form method="post" action="/">
+                <label for="tentativa">Digite um valor entre 1 e 100:</label>
+                <input id="tentativa" type="number" name="tentativa" min="1" max="100" required>
+                <button id="botao" class="btn btn-primary" type="submit">Adivinhar</button>
+            </form>
+            <form method="post" action="/">
+                <button  class="btn btn-primary" type="submit" name="reiniciar" value="true">Reiniciar</button>
+            </form>
+        <p>{{ mensagem }}</p>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
